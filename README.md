@@ -1,4 +1,4 @@
-# flipkart_product_comment_review
+# flipkart_product_comment_sentiment_analysis
 
 ![image](https://github.com/user-attachments/assets/479ab11a-6a99-48ff-81d8-ae2e4acc2d4a)
 
