@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic Shop</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- bootstrap links -->
+    <!-- fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <!-- fonts links -->
+</head>
+<body>
+
+       
+
+
+  <!-- navbar -->
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/home" id="logo"><span id="span1">S</span>Entiment <span id="span1">H</span>u<span id="span1">b</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span><img src="{{ url_for('static', filename='images/menu.png') }}" alt="" width="30px"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/product">Product</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Category
+                </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgb(67 0 86);">
+                    <li><a class="dropdown-item" href="/mobile">Mobile Phone</a></li>
+                  <li><a class="dropdown-item" href="/fridge">Fridge</a></li>
+                  <li><a class="dropdown-item" href="/laptop">Laptop</a></li>
+              </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact</a>
+               </ul>
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/Testing">Testing</a>
+		  
+                </li>
+            </ul>  &nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;    
+	<div class="icons">
+            <a href="/login"><img src="{{ url_for('static', filename='images/register.png') }}" alt="" width="18px">Login</a>
+            <a href="/register"><img src="{{ url_for('static', filename='images/register.png') }}" alt="" width="18px">Register</a>
+        </div>
+          </div>
+        </div>
+      </nav>
+    <!-- navbar -->
+
+
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg" id="navbar1">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/mobile" id="logo1"><span id="span1">B</span>rand<span id="span1">s</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span><img src="{{ url_for('static', filename='images/menu.png') }}" alt="" width="30px"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- Wrap each brand link in a list item -->
+               <b>  <li class="nav-item1">
+                    <a class="nav-link1" href="/Apple">APPLE</a>
+                </li>
+		<li class="nav-item1">
+                    <a class="nav-link1" href="/vivo">VIVO</a>
+                </li>
+		 <li class="nav-item1">
+                    <a class="nav-link1" href="/SAMSUNG">SAMSUNG</a>
+                </li>
+		<li class="nav-item1">
+                    <a class="nav-link1" href="/OPPO">OPPO</a>
+                </li>
+		
+		<li class="nav-item1">
+                    <a class="nav-link1" href="/realme">REALME</a>
+                </li>
+
+		<li class="nav-item1">
+                    <a class="nav-link1" href="/OnePlus">ONEPLUS</a>
+		</li>
+                 <li class="nav-item1">
+                    <a class="nav-link1" href="/REDMI">REDMI</a>
+                </li>
+                 <li class="nav-item1">
+                    <a class="nav-link1" href="/MOTOROLA">MOTOROLA</a>
+                </li></b>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- navbar -->
+
+ <div class="container" id="product-cards">
+      <h1 class="text-center">✨ PRODUCTS  ✨</h1>
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+             <a href="/r1">  <img src="{{ url_for('static', filename='images/r1.png') }}" alt="">  </a>
+            <div class="card-body">
+              <h3 class="text-center">realme 12 Pro+ 5G (Submarine Blue, 256 GB)  (8 GB RAM)Reviews</h3>
+              <p class="text-center">8 GB RAM | 256 GB ROM
+17.02 cm (6.7 inch) Full HD+ Display
+50MP + 8MP + 64MP | 32MP Front Camera
+5000 mAh Battery</p>
+                    <h2>₹31,999<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <a href="/r2">  <img src="{{ url_for('static', filename='images/r2.png') }}" alt=""> </a>
+            <div class="card-body">
+               <h3 class="text-center">realme C67 5G (Dark Purple, 128 GB)  (4 GB RAM)Reviews</h3>
+              <p class="text-center">4 GB RAM | 128 GB ROM | Expandable Upto 2 TB
+17.07 cm (6.72 inch) Full HD+ Display
+50MP + 2MP | 8MP Front Camera
+5000 mAh Battery</p>
+                    <h2>₹12,999<span><li class="fa-solid fa-cart-shopping"></li></span></h2>            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+                 <a href="/r3"><img src="{{ url_for('static', filename='images/r3.png') }}" alt=""></a>
+            <div class="card-body">
+              <h3 class="text-center">realme C51 (Carbon Black, 128 GB)  (4 GB RAM)Reviews </h3>
+              <p class="text-center">4 GB RAM | 128 GB ROM | Expandable Upto 2 TB
+17.12 cm (6.74 inch) HD Display
+50MP + 0.08MP | 5MP Front Camera
+5000 mAh Battery
+T612 Processo
+</p>
+             <h2>₹8,999 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+               <a href="/r4"><img src="{{ url_for('static', filename='images/r4.png') }}" alt=""></a>
+            <div class="card-body">
+              <h3 class="text-center">realme GT Neo 3 (Sprint White, 128 GB)  (8 GB RAM)) Reviews</h3>
+              <p class="text-center">8 GB RAM | 128 GB ROM
+17.02 cm (6.7 inch) Full HD+ Display
+50MP + 8MP + 2MP | 16MP Front Camera
+5000 mAh Lithium Ion Battery</p>
+              
+              <h2>₹36,999 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <a href="/o5">  <img src="{{ url_for('static', filename='images/o5.png') }}" alt=""></a>
+            <div class="card-body">
+              <h3 class="text-center">OPPO F23 5G (Bold Gold, 256 GB)  (8 GB RAM)Reviews</h3>
+              <p class="text-center">
+8 GB RAM | 256 GB ROM | Expandable Upto 1 TB
+17.07 cm (6.72 inch) Full HD+ Display
+64MP + 2MP + 2MP | 32MP Front Camera
+5000 mAh Battery</p>
+              
+              <h2>₹22,999
+<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <a href="/o6">  <img src="{{ url_for('static', filename='images/o6.png') }}" alt=""></a>
+            <div class="card-body">
+              <h3 class="text-center">OPPO A58 (Glowing Black, 128 GB)  (6 GB RAM) Reviews</h3>
+              <p class="text-center">6 GB RAM | 128 GB ROM | Expandable Upto 1 TB
+17.07 cm (6.72 inch) Full HD+ Display
+50MP + 2MP | 8MP Front Camera
+5000 mAh Battery</p>
+            
+              <h2>₹12,999 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <a href="/o7"><img src="{{ url_for('static', filename='images/o7.png') }}" alt=""></a>
+            <div class="card-body">
+              <h3 class="text-center">OPPO Reno10 Pro+ 5G (Glossy Purple, 256 GB)  (12 GB RAM) Reviews</h3>
+              <p class="text-center">12 GB RAM | 256 GB ROM
+17.12 cm (6.74 inch) Full HD+ Display
+50MP + 64MP + 8MP | 32MP Front Camera
+4700 mAh Battery</p>
+             
+              <h2>₹54,999 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+              <a href="/o8"><img src="{{ url_for('static', filename='images/o8.png') }}" alt=""></a>
+            <div class="card-body">
+              <h3 class="text-center">OPPO Find N2 Flip (Moonlit Purple, 256 GB) 8 GB RAM Reviews</h3>
+              <p class="text-center">8 GB RAM | 256 GB ROM
+17.27 cm (6.8 inch) Full HD+ Display
+50MP + 8MP | 32MP Front Camera
+4300 mAh Battery</p>
+            
+              <h2>₹79,999<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+
+
+ <div class="row" style="margin-top: 30px;">
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <a href="/a5">  <img src="{{ url_for('static', filename='images/a5.png') }}" alt=""></a>
+            <div class="card-body">
+              <h3 class="text-center">Apple iPhone 12 (Black, 64 GB)Reviews</h3>
+              <p class="text-center">64 GB ROM
+15.49 cm (6.1 inch) Super Retina XDR Display
+12MP + 12MP | 
+</p>
+             <h2>₹44,999<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <a href="/a6">  <img src="{{ url_for('static', filename='images/a6.png') }}" alt=""></a>
+            <div class="card-body">
+              <h3 class="text-center">Apple iPhone 13 Pro Max (Graphite, 1 TB)Reviews</h3>
+              <p class="text-center">1 TB ROM
+17.02 cm (6.7 inch) Super Retina XDR Display
+12MP + 12MP + 12MP | 12MP Front Camera
+A15 Bionic Chip Processor</p>            
+              <h2>₹1,79,900 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <a href="/a7"><img src="{{ url_for('static', filename='images/a7.png') }}" alt=""></a>
+            <div class="card-body">
+              <h3 class="text-center">Apple iPhone 12 Pro (Pacific Blue, 128 GB)Reviews</h3>
+              <p class="text-center">128 GB ROM
+15.49 cm (6.1 inch) Super Retina XDR Display
+12MP + 12MP + 12MP |</p>
+             
+              <h2>₹1,09,900<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+              <a href="/a8"><img src="{{ url_for('static', filename='images/a8.png') }}" alt=""></a>
+            <div class="card-body">
+              <h3 class="text-center">Apple iPhone 13 Pro Max (Gold, 512 GB)Reviews</h3>
+              <p class="text-center">512 GB ROM
+17.02 cm (6.7 inch) Super Retina XDR Display
+12MP + 12MP + 12MP | 12MP Front Camera
+A15 Bionic Chip Processor</p>            
+              <h2>₹1,59,900<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+
+ <div class="row" style="margin-top: 30px;">
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <a href="/m5">  <img src="{{ url_for('static', filename='images/m5.png') }}" alt=""></a>
+            <div class="card-body">
+              <h3 class="text-center">REDMI Note 13 Pro+ 5G (Fusion Black, 512 GB)  (12 GB RAM)Reviews</h3>
+              <p class="text-center">
+12 GB RAM | 512 GB ROM
+16.94 cm (6.67 inch) Display
+200MP (OIS) + 8MP + 2MP | 16MP Front Camera
+5000 mAh Battery
+</p>
+    
+             <h2>₹35,999
+<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <a href="/m6">  <img src="{{ url_for('static', filename='images/m6.png') }}" alt=""></a>
+            <div class="card-body">
+              <h3 class="text-center">REDMI 12 (Jade Black, 128 GB)  (4 GB RAM)Reviews</h3>
+              <p class="text-center">4 GB RAM | 128 GB ROM | Expandable Upto 1 TB
+17.25 cm (6.79 inch) Full HD+ Display
+50MP + 8MP + 2MP | 8MP Front Camera
+5000 mAh Battery</p>
+            
+              <h2>₹9,499 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <a href="/m7"><img src="{{ url_for('static', filename='images/m7.png') }}" alt=""></a>
+            <div class="card-body">
+              <h3 class="text-center">REDMI Note 12 5G (Frosted Green, 256 GB)  (8 GB RAM)Reviews</h3>
+              <p class="text-center">8 GB RAM | 256 GB ROM | Expandable Upto 1 TB
+16.94 cm (6.67 inch) Full HD+ AMOLED Display
+48MP + 8MP + 2MP | 13MP Front Camera
+5000 mAh Battery</p>
+             
+              <h2>₹18,999<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+              <a href="/m8"><img src="{{ url_for('static', filename='images/m8.png') }}" alt=""></a>
+            <div class="card-body">
+              <h3 class="text-center">REDMI NOTE 10 LITE (Champagne Gold, 64 GB)  (4 GB RAM) Reviews</h3>
+              <p class="text-center">4 GB RAM | 64 GB ROM
+16.94 cm (6.67 inch) Display
+48MP Rear Camera
+5020 mAh Battery</p>            
+              <h2>₹9,980<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+
+  <div class="row" style="margin-top: 30px;">
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <a href="/v5">  <img src="{{ url_for('static', filename='images/v5.png') }}" alt=""></a>
+            <div class="card-body">
+              <h3 class="text-center">vivo V29 Pro 5G (Black, 256 GB)  Reviews</h3>
+              <p class="text-center">
+8 GB RAM | 256 GB ROM
+17.22 cm (6.78 inch) Full HD+ AMOLED Display
+50MP + 12MP + 8MP | 50MP Front Camera
+4600 mAh Battery.</p>
+              
+              <h2>₹39,999
+<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <a href="/v6">  <img src="{{ url_for('static', filename='images/v6.png') }}" alt=""></a>
+            <div class="card-body">
+              <h3 class="text-center">vivo Y17s (Glitter Purple, 64 GB) Reviews</h3>
+              <p class="text-center">4 GB RAM | Expandable Upto 1 TB
+16.66 cm (6.56 inch) HD+ Display
+50MP + 2MP |</p>
+            
+              <h2>₹10,499 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <a href="/v7"><img src="{{ url_for('static', filename='images/v7.png') }}" alt=""></a>
+            <div class="card-body">
+              <h3 class="text-center">vivo Y200 5G (Desert Gold, 128 GB)  Reviews</h3>
+              <p class="text-center">8 GB RAM | 128 GB ROM
+16.94 cm (6.67 inch) Full HD+ Display
+64MP + 2MP | 16MP Front Camera
+4800 mAh Battery</p>
+             
+              <h2>₹21,999 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+              <a href="/v8"><img src="{{ url_for('static', filename='images/v8.png') }}" alt=""></a>
+            <div class="card-body">
+              <h3 class="text-center">vivo V29 5G (Red, 256 GB) Reviews</h3>
+              <p class="text-center">12 GB RAM | 256 GB ROM
+17.22 cm (6.78 inch) Full HD+ AMOLED Display
+50MP + 8MP + 2MP | 50MP Front Camera
+4600 mAh Battery</p>
+            
+              <h2>₹36,999<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <a href="/s5">  <img src="{{ url_for('static', filename='images/s5.png') }}" alt=""></a>
+            <div class="card-body">
+              <h3 class="text-center">SAMSUNG Galaxy M14 5G (Icy Silver, 128 GB)  (6 GB RAM)  Reviews</h3>
+              <p class="text-center">
+6 GB RAM | 128 GB ROM
+16.76 cm (6.6 inch) Display
+50MP Rear Camera
+6000 mAh Battery</p>
+                <h2>₹12,595
+<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <a href="/s6">  <img src="{{ url_for('static', filename='images/s6.png') }}" alt=""></a>
+            <div class="card-body">
+              <h3 class="text-center">SAMSUNG Galaxy M14 5G (Smoky Teal, 128 GB)  (4 GB RAM) Reviews</h3>
+        <p class="text-center">
+6 GB RAM | 128 GB ROM
+16.76 cm (6.6 inch) Display
+50MP Rear Camera
+6000 mAh Battery</p>
+                <h2>₹11,427 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <a href="/s7"><img src="{{ url_for('static', filename='images/s7.png') }}" alt=""></a>
+            <div class="card-body">
+              <h3 class="text-center">SAMSUNG Galaxy F13 (Waterfall Blue, 64 GB)  (4 GB RAM)  Reviews</h3>
+              <p class="text-center">4 GB RAM | 64 GB ROM | Expandable Upto 1 TB
+16.76 cm (6.6 inch) Full HD+ Display
+50MP + 5MP + 2MP | 8MP Front Camera
+6000 mAh Lithium Ion Battery</p>
+              <h2>₹9,999 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+              <a href="/v8"><img src="{{ url_for('static', filename='images/s8.png') }}" alt=""></a>
+            <div class="card-body">
+              <h3 class="text-center">SAMSUNG Galaxy Z Fold4 5G (Phantom Black, 256 GB)  (12 GB RAM)Reviews</h3>
+              <p class="text-center">12 GB RAM | 256 GB ROM
+19.3 cm (7.6 inch) Full HD+ Display
+50MP + 12MP + 10MP | 10MP Front Camera
+4400 mAh Lithium Ion Battery</p>
+            
+              <h2>₹1,77,999<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+
+<div class="row" style="margin-top: 30px;">
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <a href="/n5">  <img src="{{ url_for('static', filename='images/n5.png') }}" alt=""></a>
+            <div class="card-body">
+              <h3 class="text-center">Motorola G32 (Satin Maroon, 128 GB)  (8 GB RAM)Reviews</h3>
+              <p class="text-center">
+8 GB RAM | 128 GB ROM
+16.51 cm (6.5 inch) Full HD+ Display
+50MP + 8MP + 2MP | 16MP Front Camera
+5000 mAh Lithium Polymer Battery</p>
+    
+             <h2>₹9,999<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <a href="/n7"><img src="{{ url_for('static', filename='images/n7.png') }}" alt=""></a>
+            <div class="card-body">
+            <h3 class="text-center">Motorola e13 (Creamy White, 128 GB)  (8 GB RAM)Reviews</h3>
+              <p class="text-center">8 GB RAM | 128 GB ROM | Expandable Upto 1 TB
+16.51 cm (6.5 inch) HD+ Display
+13MP Rear Camera | 5MP Front Camera
+5000 mAh Battery</p>
+            
+              <h2>₹7,499<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+              <a href="/n8"><img src="{{ url_for('static', filename='images/n8.png') }}" alt=""></a>
+            <div class="card-body">
+              <h3 class="text-center">Motorola e22s (Arctic Blue, 64 GB)  (4 GB RAM)Reviews</h3>
+              <p class="text-center">4 GB RAM | 64 GB ROM | Expandable Upto 1 TB
+16.51 cm (6.5 inch) HD+ Display
+16MP + 2MP | 8MP Front Camera
+5000 mAh Lithium Polymer Battery</p>            
+              <h2>₹7,369<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+  <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+              <a href="/o18"><img src="{{ url_for('static', filename='images/o18.png') }}" alt=""></a>
+            <div class="card-body">
+              <h3 class="text-center">OnePlus 11R 5G (Solar Red, 512 GB) Reviews</h3>
+              <p class="text-center">18 GB RAM | 512 GB ROM
+17.02 cm (6.7 inch) Display
+50MP Rear Camera | 16MP Front Camera
+5000 mAh Battery</p>
+             <h2>₹45,990<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- product cards -->
+
+
+<a href="#" class="arrow"><i><img src="{{ url_for('static', filename='images/arrow.png') }}" alt=""></i></a>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+</body>
+</html>
